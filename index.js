@@ -49,25 +49,25 @@ function mainMenu() {
 
         switch (option) {
             case "DEPARTMENTS":
-            //View departments function
+            viewDepartments();
             break;
             case "ROLES":
-            //View roles function
+            viewRoles()
             break;
             case "EMPLOYEES":
-            //View employees function
+            viewEmployees();
             break;
             case "NEW_DEPT":
-            //Create new department function
+            newDepartment();
             break;
             case "NEW_ROLE":
-            //Create new role function
+            newRole();
             break;
             case "NEW EMPLOYEE":
-            //Create new employee function
+            newEmployee();
             break;
             case "NEW_EMPLOYEE_ROLE":
-            //Update employee role function
+            updateEmployee();
             break;
             case "EXIT":
                 process.exit();
