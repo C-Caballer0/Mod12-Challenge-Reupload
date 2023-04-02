@@ -1,7 +1,8 @@
 const inquirer = require("inquirer");
-const db = require("./db");
+const database = require("./db");
 require("console.table");
 
+mainMenu();
 
 function mainMenu() {
     inquirer.prompt([
@@ -76,15 +77,26 @@ function mainMenu() {
 }
 
 function viewDepartments(){
-
+    database.viewDepartments()
+    .then(([rows]) => {
+        let departments = rows;
+        console.table(departments);
+    }).then(() => mainMenu());
 }
 
 function viewRoles(){
-
+    database.viewRoles()
+    .then(([rows]) => {
+        let roles = rows;
+        console.table(roles);
+    }).then(() => mainMenu());
 }
 
 function viewEmployees(){
-
+    database.viewEmployees()
+    .then(([rows]) => {
+        console.table(rows);
+    }).then(() => mainMenu());
 }
 
 function newDepartment(){
@@ -100,5 +112,5 @@ function newEmployee(){
 }
 
 function updateEmployee(){
-    
+
 }
