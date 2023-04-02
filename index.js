@@ -75,3 +75,30 @@ function mainMenu() {
     })
 }
 
+function viewDepartments(){
+
+}
+
+function viewRoles(){
+
+}
+
+function viewEmployees(){
+
+}
+
+function newDepartment(){
+
+}
+
+function newRole(){
+
+}
+
+function newEmployee(){
+
+}
+
+function updateEmployee(){
+    
+}

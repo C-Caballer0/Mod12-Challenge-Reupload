@@ -5,7 +5,7 @@ class database {
     constructor(connection) {
         this.connection =  connection;
     }
-}
+
 
 viewDepartments() {
     return this.connection.promise().query(
@@ -47,5 +47,7 @@ updateEmployee(employeeID,roleID){
     return this.connection.promise().query(
         "UPDATE employee SET role_id = ? WHERE id = ?", [roleID, employeeID]
     );
+  }
 }
+
 module.exports = new database(connection);
